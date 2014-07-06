@@ -6,6 +6,6 @@ package com.github.knshiro
 object Main extends App {
 
   //Problem1.run()
-  Problem2.run()
-
+  //Problem2.run()
+  Problem3.run()
 }
