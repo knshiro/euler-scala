@@ -14,14 +14,14 @@ trait Problem {
     result
   }
 
-  def timeAverage[A](a: => A) = {
-    val times = for (i <- 1 to 10) yield {
+  def timeAverage[A](a: => A, nbTimes:Int = 10, doPrint:Boolean = true) = {
+    val times = for (i <- 1 to nbTimes) yield {
       val now = System.nanoTime
       val result = a
       val micros = (System.nanoTime - now) / 1000
       micros
     }
-    println("Average of %d microseconds".format(times.sum / times.length))
+    if(doPrint) println("Average of %d microseconds".format(times.sum / times.length))
     a
   }
 
