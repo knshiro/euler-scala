@@ -10,5 +10,7 @@ object Main extends App {
 //  Problem3.run()
 //  Problem4.run()
 //  Problem5.run()
-  Problem6.run()
+//  Problem6.run()
+
+  s99.Problem1.run()
 }
