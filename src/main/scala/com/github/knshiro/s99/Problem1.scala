@@ -17,9 +17,9 @@ class Problem1 {
   // stack overflow.
   @tailrec
   final def lastRec[T](l:Seq[T]):T = l match {
-    //case Seq() => throw new Exception("Empty list can not have a last element")
     case x +: Seq() => x
     case x +: xs => lastRec(xs)
+    case _ => throw new Exception("Empty list can not have a last element")
   }
 
   // Even with tail recursion optimization there is still an order of magnitude
@@ -46,11 +46,14 @@ object Problem1 extends Problem1 with Problem {
   def run() = {
     val list = List.range(1,100000)
     println("warm up")
+    timeAverage(list.last,100,doPrint = false)
     timeAverage(lastImperative(list),100,doPrint = false)
     timeAverage(lastRec(list),100, doPrint = false)
     timeAverage(lastRec2(list),100, doPrint = false)
     timeAverage(lastRec3(list),100, doPrint = false)
 
+    println("list.last")
+    timeAverage(list.last,2000)
     println("lastImperative(list)")
     timeAverage(lastImperative(list),2000)
     println("lastRec(list)")
