@@ -1,4 +1,5 @@
 package com.github.knshiro
+package euler
 
 /**
  * Created by knshiro on 7/6/14.

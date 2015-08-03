@@ -1,4 +1,5 @@
 package com.github.knshiro
+package euler
 
 import annotation.tailrec
 

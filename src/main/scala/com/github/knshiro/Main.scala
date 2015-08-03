@@ -5,12 +5,12 @@ package com.github.knshiro
  */
 object Main extends App {
 
-//  Problem1.run()
-//  Problem2.run()
-//  Problem3.run()
-//  Problem4.run()
-//  Problem5.run()
-//  Problem6.run()
+//  euler.Problem1.run()
+//  euler.Problem2.run()
+//  euler.Problem3.run()
+//  euler.Problem4.run()
+//  euler.Problem5.run()
+//  euler.Problem6.run()
 
   s99.Problem1.run()
 }
