@@ -45,6 +45,12 @@ object Problem1 extends Problem1 with Problem {
   
   def run() = {
     val list = List.range(1,100000)
+
+    assert(list.last == lastImperative(list))
+    assert(list.last == lastRec(list))
+    assert(list.last == lastRec2(list))
+    assert(list.last == lastRec3(list))
+
     println("warm up")
     timeAverage(list.last,100,doPrint = false)
     timeAverage(lastImperative(list),100,doPrint = false)
