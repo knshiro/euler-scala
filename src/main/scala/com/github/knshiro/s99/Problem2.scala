@@ -22,6 +22,7 @@ class Problem2 {
 
   // Performance is quite bad (more than 200x slower) despite the tailrec optimization, let's try
   // another unapply method
+
   @tailrec
   final def penultimateRec2[T](l:Seq[T]):T = l match {
     case Seq(x1, x2) => x1
@@ -30,6 +31,7 @@ class Problem2 {
   }
 
   // Much better (only 1.5x slower) but let's see if the last unapply has an impact
+  
   @tailrec
   final def penultimateRec3[T](l:Seq[T]):T = l match {
     case Seq(x1, x2) => x1

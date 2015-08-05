@@ -24,6 +24,7 @@ class Problem1 {
 
   // Even with tail recursion optimization there is still an order of magnitude
   // of speed difference so let's see if it comes from match
+  
   @tailrec
   final def lastRec2[T](l:Seq[T]):T = {
     if(l.tail.isEmpty) l.head else lastRec2(l.tail)
@@ -31,6 +32,7 @@ class Problem1 {
 
   // Removing match indeed gets us back to a similar time than the imperative
   // version. Now let's see if it is the unapply in the match that is the culprit
+  
   @tailrec
   final def lastRec3[T](l:Seq[T]):T = l match {
     case l if l.tail.isEmpty => l.head
