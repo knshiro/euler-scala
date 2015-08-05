@@ -12,5 +12,6 @@ object Main extends App {
 //  euler.Problem5.run()
 //  euler.Problem6.run()
 
-  s99.Problem1.run()
+//  s99.Problem1.run()
+  s99.Problem2.run()
 }
