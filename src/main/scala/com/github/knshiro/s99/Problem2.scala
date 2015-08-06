@@ -50,6 +50,7 @@ class Problem2 {
   }
 
   // IT HAS SAME PERFORMANCE AS IMPERATIVE VERSION!!
+  // WARNING it does not actually work all the time!
 }
 
 object Problem2 extends Problem2 with Problem {
@@ -79,6 +80,10 @@ object Problem2 extends Problem2 with Problem {
     timeAverage(penultimateRec3(list),1000)
     println("penultimateRec4(list)")
     timeAverage(penultimateRec4(list),1000)
+
+    // This fails
+    // val stream = Stream.range(1,100000)
+    // penultimateRec4(stream)
   }
 
 }
