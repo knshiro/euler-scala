@@ -1,6 +1,8 @@
 package com.github.knshiro
 package euler
 
+import scala.language.postfixOps
+
 /**
  * Created by knshiro on 7/6/14.
  */

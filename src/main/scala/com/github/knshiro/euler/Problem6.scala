@@ -1,6 +1,8 @@
 package com.github.knshiro
 package euler
 
+import scala.language.postfixOps
+
 /**
  * Created by knshiro on 7/6/14.
  */
@@ -27,7 +29,6 @@ class Problem6 {
   }
 
   def squareSumMinusSumSquareCombination(n:Int) = {
-    val as = Array.range(1,n+1)
     val products = for{
       i <- 0 to n
       j <- i+1 to n

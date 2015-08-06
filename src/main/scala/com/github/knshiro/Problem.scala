@@ -6,7 +6,7 @@ package com.github.knshiro
 trait Problem {
   def run(): Unit
 
-  def time[A](a: => A) = {
+  def time[A](a: => A):A = {
     val now = System.nanoTime
     val result = a
     val micros = (System.nanoTime - now) / 1000
@@ -14,7 +14,7 @@ trait Problem {
     result
   }
 
-  def timeAverage[A](a: => A, nbTimes:Int = 10, doPrint:Boolean = true) = {
+  def timeAverage[A](a: => A, nbTimes:Int = 10, doPrint:Boolean = true):Unit = {
     val times = for (i <- 1 to nbTimes) yield {
       val now = System.nanoTime
       val result = a
@@ -22,7 +22,7 @@ trait Problem {
       micros
     }
     if(doPrint) println("Average of %d microseconds".format(times.sum / times.length))
-    a
+    ()
   }
 
 }
